@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai latte</title>
+  </head>
+  <style>
+    body {
+      background-color: #ce9461;
+      text-align: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+    h1,
+    h2 {
+      color: #8e341c;
+    }
+
+    h2 {
+      font-size: 35px;
+    }
+
+    img {
+      width: 800px;
+    }
+
+    p {
+      color: #fcffe7;
+      max-width: 800px;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      font-size: 20px;
+    }
+
+    a {
+      color: #8e341c;
+    }
+
+    button {
+      background-color: #e0d8b0;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #8e341c;
+      color: #8e341c;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    .author {
+      color: #fcffe7;
+    }
+  </style>
+  <body>
+    <div class="content">
+      <h1>Chai latte</h1>
+      <img
+        src="https://perfectdailygrind.com/wp-content/uploads/2020/09/Chai-Latte-Cover.jpg"
+      />
+      <br />
+      <h2>What is Chai latte?</h2>
+      <p>
+        The chai latte is hot, milky, fragrant, gently spicy, and popular in
+        cafés everywhere. However, despite the fact that it’s served in coffee
+        shops and named after the latte, it actually contains no coffee
+        whatsoever.
+        <br />
+        <br />
+        Chai is one of the world’s oldest tea-based drinks. It originated in
+        India thousands of years ago, and has spread throughout the world over
+        the past two centuries. One big question remains, however: how did a
+        beverage that’s been enjoyed in India for thousands of years end up
+        becoming so popular on coffee shop menus?
+      </p>
+      <br />
+      <div class="premium">
+        <a
+          href="https://www.bbcgoodfood.com/recipes/chai-latte"
+          target="_blank"
+        >
+          <em>Get recipe</em>
+        </a>
+      </div>
+      <br />
+      <button><strong>ORDER YOUR CHAI LATTE TODAY!</strong></button>
+      <br />
+      <br />
+      <div class="author">This page was built by Akanesi</div>
+    </div>
+
+    <script>
+      function orderChailatte() {
+        let name = prompt("What is your name?");
+        let quantity = prompt("How many would you like to order?");
+
+        if (quantity <= 100) {
+          alert(
+            "Thank you " + name + " for your order! Enjoy your Chai latte 😊 "
+          );
+        } else {
+          alert(
+            "I'm sorry " + name + " but we are out of stock at the moment."
+          );
+        }
+      }
+
+      let orderChaiButton = document.querySelector("button");
+      orderChaiButton.addEventListener("click", orderChailatte);
+    </script>
+  </body>
+</html>
